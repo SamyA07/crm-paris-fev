@@ -1,0 +1,18 @@
+<tr>
+  <td>{{ prestation.typePresta }}</td>
+  <td>{{ prestation.client }}</td>
+  <td>{{ prestation.nbJours }}</td>
+  <td>{{ prestation.tjmHt }}</td>
+  <td>{{ prestation | total }}</td>
+  <td>{{ prestation | total: prestation.tauxTva }}</td>
+  <td [appState]="prestation.state">
+    <select class="form-control" (change)="changeState(prestation, $event)">
+      <option
+        *ngFor="let state of (states | keyvalue)"
+        [value]="state.value"
+        [selected]="prestation.state === state.value"
+        >{{ state.value }}
+      </option>
+    </select>
+  </td>
+</tr>

@@ -11,7 +11,7 @@ export const FakePrestations: Prestation[] = [
   }),
   new Prestation({
     id: 'azda',
-    typePresta: 'Formation',
+    typePresta: 'Lead Dev',
     client: 'Atos',
     tjmHt: 3500,
     nbJours: 20,

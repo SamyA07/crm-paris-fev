@@ -1,3 +1,6 @@
-<p>
-  list-prestations works!
-</p>
+<app-tableau [headers]="headers">
+  <app-prestation
+    *ngFor="let item of collection"
+    [prestation]="item"
+  ></app-prestation>
+</app-tableau>

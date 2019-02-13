@@ -1,0 +1,6 @@
+<app-tableau [headers]="headers">
+    <app-client
+      *ngFor="let item of collection"
+      [client]="item"
+    ></app-client>
+  </app-tableau>
