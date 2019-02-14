@@ -1,0 +1,94 @@
+<div class="myForm">
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Type</label>
+      <input
+        name="type"
+        required
+        [(ngModel)]="init.typePresta"
+        type="text"
+        class="form-control"
+        id="type"
+        #type="ngModel"
+      />
+      <div class="alert alert-danger" *ngIf="type.invalid && type.touched">
+        Champ invalide
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="client">Client</label>
+      <input
+        name="client"
+        required
+        minlength="3"
+        required
+        [(ngModel)]="init.client"
+        type="text"
+        class="form-control"
+        id="client"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="nbjours">Nb Jours</label>
+      <input
+        name="nbjours"
+        [(ngModel)]="init.nbJours"
+        type="number"
+        class="form-control"
+        id="nbjours"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="tjmht">Tjm HT</label>
+      <input
+        name="tjm"
+        [(ngModel)]="init.tjmHt"
+        type="number"
+        class="form-control"
+        id="tjmht"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="tva">Tva</label>
+      <input
+        name="tva"
+        [(ngModel)]="init.tauxTva"
+        type="number"
+        class="form-control"
+        id="tva"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="state">State</label>
+      <select
+        name="state"
+        [(ngModel)]="init.state"
+        class="form-control"
+        id="state"
+      >
+        <option *ngFor="let state of (states | keyvalue)" [value]="state.value">
+          {{ state.value }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Commentaire</label>
+      <textarea
+        name="comment"
+        class="form-control"
+        [(ngModel)]="init.comment"
+        id="comment"
+      ></textarea>
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+</div>
