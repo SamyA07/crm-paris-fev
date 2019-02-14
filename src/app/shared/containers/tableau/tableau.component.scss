@@ -1,4 +1,4 @@
-@import 'theme';
+@import "theme";
 
 #tab .state-annule {
   background: $palette-color-one;
@@ -18,4 +18,9 @@
 
 #tab .state-inactif {
   background: $palette-color-one;
+}
+
+app-list-clients #tab thead {
+  background: lighten($dark-color, 10);
+  color: $light-color;
 }

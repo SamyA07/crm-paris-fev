@@ -1,0 +1,17 @@
+@import 'theme';
+@import 'fonts';
+
+div {
+  background: $dark-color;
+  padding: 2rem;
+  h1 {
+    font-size: $h1-fontsize;
+    color: $light-color;
+    margin: 0;
+  }
+  p {
+    font-size: $regular-fontsize;
+    color: darken($light-color, 10);
+    margin: 0;
+  }
+}
