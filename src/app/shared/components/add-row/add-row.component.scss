@@ -1,0 +1,20 @@
+@import 'theme';
+@import 'layout';
+
+a {
+  display: inline-block;
+  padding: .3rem 1rem;
+  border-radius: 4rem;
+  color: $light-color;
+  margin-left: $gutters;
+}
+
+:host-context(app-template-a) a {
+  background: $palette-color-one;
+  border: 1px solid darken($palette-color-one, 10);
+}
+
+:host-context(app-template-b) a {
+  background: $dark-color;
+  border: 1px solid darken($dark-color, 10);
+}

@@ -10,6 +10,7 @@ import { PrestationService } from '../../services/prestation.service';
 export class ListPrestationsComponent implements OnInit {
   public collection: Prestation[];
   public headers: string[];
+  public labelLink = 'Add prestation';
 
   constructor(private ps: PrestationService) {}
 
