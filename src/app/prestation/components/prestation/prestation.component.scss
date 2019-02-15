@@ -1,3 +1,13 @@
+@import 'theme';
+
 :host() {
-  display: contents;
+ display: contents;
+}
+:host-context(app-template-a) .active {
+ background: $palette-color-one;
+ color: $light-color;
+}
+:host-context(app-template-b) .active {
+ background: $dark-color;
+ color: $light-color;
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
@@ -11,7 +11,7 @@ import { Prestation } from 'src/app/shared/models/prestation.model';
 export class FormPrestaComponent implements OnInit {
   public form: FormGroup;
   public states = State;
-  public init = new Prestation();
+  @Input() init = new Prestation();
   @Output() nItem: EventEmitter<Prestation> = new EventEmitter();
 
   constructor(private fb: FormBuilder) {}

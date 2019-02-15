@@ -10,6 +10,10 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
 import { PrestationRoutingModule } from './prestation-routing.module';
+import { DetailPrestationComponent } from './components/detail-prestation/detail-prestation.component';
+import { CommentPrestationComponent } from './components/comment-prestation/comment-prestation.component';
+import { PageEditPrestationComponent } from './pages/page-edit-prestation/page-edit-prestation.component';
+import { EditPrestationComponent } from './containers/edit-prestation/edit-prestation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { PrestationRoutingModule } from './prestation-routing.module';
     PageAddPrestationComponent,
     AddPrestationComponent,
     FormPrestationComponent,
-    FormPrestaComponent
+    FormPrestaComponent,
+    DetailPrestationComponent,
+    CommentPrestationComponent,
+    PageEditPrestationComponent,
+    EditPrestationComponent
   ],
   imports: [
     CommonModule,

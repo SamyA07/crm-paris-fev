@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { PrestationService } from '../../services/prestation.service';
-import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-prestation',
@@ -9,18 +9,17 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./add-prestation.component.scss']
 })
 export class AddPrestationComponent implements OnInit {
-
   constructor(
     private ps: PrestationService,
     private router: Router,
     private route: ActivatedRoute
-  ) { }
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public add(item: Prestation) {
-    this.ps.add(item);
-    this.router.navigate(['../'], {relativeTo: this.route});
+    this.ps
+      .add(item)
+      .then(() => this.router.navigate(['../'], { relativeTo: this.route }));
   }
 }

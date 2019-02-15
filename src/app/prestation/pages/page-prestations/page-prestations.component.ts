@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagePrestationsComponent implements OnInit {
   titre = 'Prestations';
-  constructor() { }
+  listLinks = [
+    { route: 'detail', label: 'Détail' },
+    { route: 'comment', label: 'Commentaire' }
+  ];
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

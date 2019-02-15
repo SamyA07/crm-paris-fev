@@ -1,0 +1,7 @@
+<div *ngIf="detail$ | async as prestation">
+  <ul>
+    <li>Type : {{ prestation.typePresta }}</li>
+    <li>Client : {{ prestation.client }}</li>
+    <li>Etat : {{ prestation.state }}</li>
+  </ul>
+</div>

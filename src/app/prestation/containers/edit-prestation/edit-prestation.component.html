@@ -1,0 +1,6 @@
+<ng-container *ngIf="(prestation$ | async) as prestation">
+  <app-form-presta
+    (nItem)="update($event)"
+    [init]="prestation"
+  ></app-form-presta>
+</ng-container>
